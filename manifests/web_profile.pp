@@ -5,7 +5,7 @@ class owncloud_app::web_profile {
     action => 'accept',
   }
 
-  include apache::mod::php
+  #  include apache::mod::php
   include mysql::client
   include mysql::bindings
   include mysql::bindings::php
