@@ -20,6 +20,8 @@ application owncloud_app (
     export   => Database["owndb-${name}"]
   }
 
+  # Collect the node name of the Owncloud_app::Database
+  $db_hostname = collect_component_nodes($nodes, Owncloud_app::Database)
   # Collect the titles of all Web components declared in nodes.
   $web_components = collect_component_titles($nodes, Owncloud_app::Web)
   # Verify there is at least one web.
@@ -33,9 +35,13 @@ application owncloud_app (
     $http = Http["web-${comp_name}"]
     # Declare the web component.
     owncloud_app::web { $comp_name:
-      interface   => $web_int,
-      consume     => Database["owndb-${name}"],
-      export      => $http,
+      db_host   => $db_hostname,
+      db_name   => $database,
+      db_pass   => $db_pass,
+      db_user   => $db_user,
+      interface => $web_int,
+      consume   => Database["owndb-${name}"],
+      export    => $http,
     }
     # Return the $http resource for the array.
     $http
