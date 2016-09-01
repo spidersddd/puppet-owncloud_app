@@ -3,9 +3,9 @@ define owncloud_app::web (
   String $db_name,
   String $db_user,
   String $db_pass,
-  String $manage_db = false,
   String $interface = '',
   String $apache_port = '8080',
+  Boolean $manage_db = false,
 ) {
   include owncloud_app::web_profile
   include apache::mod::php
