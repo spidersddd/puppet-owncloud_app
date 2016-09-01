@@ -23,9 +23,9 @@ application owncloud_app (
   # Collect the titles of all Web components declared in nodes.
   $web_components = collect_component_titles($nodes, Owncloud_app::Web)
   # Verify there is at least one web.
-  if (size($web_components) == 0) {
-    fail("Found no web component for Owncloud_app[${name}]. At least one is required")
-  }
+ #  if (size($web_components) == 0) {
+ #  fail("Found no web component for Owncloud_app[${name}]. At least one is required")
+ #}
   # For each of these declare the component and create an array of the exported
   # Http resources from them for the load balancer.
   $web_https = $web_components.map |$comp_name| {
