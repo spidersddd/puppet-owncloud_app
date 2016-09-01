@@ -21,7 +21,7 @@ application owncloud_app (
   }
 
   # Collect the node name of the Owncloud_app::Database
-  $db_hostname = collect_component_nodes($nodes, Owncloud_app::Database)
+  $db_hostname = collect_component_titles($nodes, Owncloud_app::Database)
   # Collect the titles of all Web components declared in nodes.
   $web_components = collect_component_titles($nodes, Owncloud_app::Web)
   # Verify there is at least one web.
