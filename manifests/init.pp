@@ -35,7 +35,7 @@ application owncloud_app (
     $http = Http["web-${comp_name}"]
     # Declare the web component.
     owncloud_app::web { $comp_name:
-      db_host   => $db_hostname,
+      db_host   => $db_hostname[0],
       db_name   => $database,
       db_pass   => $db_pass,
       db_user   => $db_user,
