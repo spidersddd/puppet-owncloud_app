@@ -17,13 +17,13 @@ define owncloud_app::web (
     /\S+/   => $::networking['interfaces'][$interface]['ip'],
     default => $::ipaddress }
 
-#  apache::vhost { $::fqdn:
-#    priority   => '10',
-#    vhost_name => $::fqdn,
-#    port       => $apache_port,
-#    docroot    => '/var/www/html',
-#    ip         => $int,
-#  } ->
+  apache::vhost { $::fqdn:
+    priority   => '10',
+    vhost_name => $::fqdn,
+    port       => $apache_port,
+    docroot    => '/var/www/html',
+    ip         => $int,
+  } ->
 
   class { '::owncloud':
     admin_pass     => 'puppetlabs',
@@ -34,7 +34,7 @@ define owncloud_app::web (
     db_pass        => $db_pass,
     manage_db      => $manage_db,
     http_port      => $apache_port,
-#    manage_apache => false,
+    manage_apache  => false,
     db_if_connect  => $::ipaddress_enp0s8,
     require        => [
       Class['Mysql::Client'],
