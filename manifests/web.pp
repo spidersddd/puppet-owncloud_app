@@ -7,23 +7,18 @@ define owncloud_app::web (
   String $apache_port = '8080',
   Boolean $manage_db = false,
 ) {
+  $admin_user = hiera('owncloud_app::web::admin_user', "admin-${::hostname}")
+  $admin_pass = hiera('owncloud_app::web::admin_pass', "admin-${::hostname}")
+
   include owncloud_app::web_profile
 
   $int =  $interface ? {
     /\S+/   => $::networking['interfaces'][$interface]['ip'],
     default => $::ipaddress }
 
-#  apache::vhost { $::fqdn:
-#    priority   => '10',
-#    vhost_name => $::fqdn,
-#    port       => $apache_port,
-#    docroot    => '/var/www/html',
-#    ip         => $int,
-#  } ->
-
   class { '::owncloud':
-    admin_pass     => 'puppetlabs',
-    admin_user     => 'admin',
+    admin_pass     => $admin_pass,
+    admin_user     => $admin_user,
     db_host        => $db_host,
     db_name        => $db_name,
     db_user        => $db_user,
