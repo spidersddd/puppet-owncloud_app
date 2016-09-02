@@ -1,6 +1,7 @@
 class owncloud_app::database_profile (
   String $bind_address = '0.0.0.0',
 ) {
+
   class { 'mysql::server':
     override_options => {
       'mysqld'       => {
