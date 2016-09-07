@@ -10,7 +10,6 @@
             3. [Usage - Configuration options and additional functionality](#usage)
             4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
             5. [Limitations - OS compatibility, etc.](#limitations)
-            6. [Development - Guide for contributing to the module](#development)
 
 ## Description
 
@@ -26,7 +25,7 @@ In addition, see the [application orchestration workflow](https://docs.puppet.co
 
 If you use r10k, this module includes a `Puppetfile` that will install the module and its dependencies.
 
-## Getting started with owncloud_app
+## Beginning with owncloud_app
 
 ### SELinux
 

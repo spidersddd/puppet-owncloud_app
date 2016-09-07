@@ -3,10 +3,10 @@ application owncloud_app (
   String $db_user         = 'owncloud',
   String $db_pass         = 'owncloud',
   String $web_int         = 'enp0s8',
-#  String $lb_ipaddress    = '0.0.0.0',
-#  String $lb_port         = '80',
-#  String $lb_balance_mode = 'roundrobin',
-#  Array  $lb_options      = ['forwardfor','http-server-close','httplog'],
+  String $lb_ipaddress    = '0.0.0.0',
+  String $lb_port         = '80',
+  String $lb_balance_mode = 'roundrobin',
+  Array  $lb_options      = ['forwardfor','http-server-close','httplog'],
 ){
   $db_components = collect_component_titles($nodes, Owncloud_app::Database)
   if (size($db_components) != 1) {
@@ -46,5 +46,17 @@ application owncloud_app (
     # Return the $http resource for the array.
     $http
   }
-
+  # Create an lb component for each declared load balancer.
+  $lb_components = collect_component_titles($nodes, Wordpress_app::Lb)
+  $lb_components.each |$comp_name| {
+    owncloud_app::lb { $comp_name:
+      balancermembers => $web_https,
+      lb_options      => $lb_options,
+      ipaddress       => $lb_ipaddress,
+      port            => $lb_port,
+      balance_mode    => $lb_balance_mode,
+      require         => $web_https,
+      export          => Http["lb-${name}"],
+    }
+  }
 }
