@@ -47,7 +47,7 @@ application owncloud_app (
     $http
   }
   # Create an lb component for each declared load balancer.
-  $lb_components = collect_component_titles($nodes, Wordpress_app::Lb)
+  $lb_components = collect_component_titles($nodes, Owncloud_app::Lb)
   $lb_components.each |$comp_name| {
     owncloud_app::lb { $comp_name:
       balancermembers => $web_https,
