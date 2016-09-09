@@ -12,11 +12,11 @@ owncloud\_app
     - [AO application ](#ao-application )
     - [Components vs Profiles](#componetnts-vs-profiles)
   5. [References](#references)
-    1. [Applications](#application)
+    - [Applications](#application)
         - [owncloud\_app](#owncloud\_app)
             - Components
             - Parameters
-    2. [Component Types](#component-types)
+    - [Component Types](#component-types)
         - [owncloud\_app::database](#owncloud\_app::database)
             - Components
             - Parameters
@@ -26,7 +26,7 @@ owncloud\_app
         - [owncloud\_app::lb](#owncloud\_app::lb)
             - Components
             - Parameters
-    3. [Classes](#classes)
+    - [Classes](#classes)
         1. [owncloud\_app::database\_profile](#owncloud\_app::database\_profile)
             - Parameters
         2. [owncloud\_app::web\_profile](#owncloud\_app::web\_profile)
