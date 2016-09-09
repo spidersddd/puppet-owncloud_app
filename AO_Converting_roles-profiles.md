@@ -9,7 +9,7 @@
     - [Example owncloud\_app::web defined type for AO](#example-owncloud_appweb-defined-type-for-ao)
     - [Example owncloud\_app::web_profile for AO](#example-owncloud_appweb_profile-for-ao)
     - [Example AO application](#example-ao-application)
-  3. [Things to note when converting Roles/Profile](#things-to-knote-when-converting-rolesprofile)
+  3. [Things to note when converting Roles/Profile](#things-to-note-when-converting-rolesprofile)
   4. [Application Orchestration classification](#application-orchestration-classification)
     - [Example AO site definition in site.pp](#example-ao-site-definition-in-sitepp)
     - [Example puppet-app command](#example-puppet-app-command)
