@@ -1,11 +1,13 @@
-#Summary 
+owncloud\_app
+===========
 
-- [Application Orchestration (AO) example owncloud_app](#section-id-1)
-  - [Description](#description)
-  - [Setup Requirements](#section-id-12)
-  - [Beginning with owncloud_app](#section-id-24)
-    - [Classification](#section-id-28)
-    - [SELinux](#section-id-57)
+#### Table of Contents
+
+  1. [Description](#description)
+  2. [Setup Requirements](#setup-requirements)
+  3. [Beginning with owncloud\_app](#beginning-with-owncloud\_app)
+    - [Classification](#classification)
+    - [SELinux](#selinux)
   - [Patterns](#section-id-64)
     - [AO application ](#section-id-68)
     - [Components vs Profiles](#section-id-129)
@@ -33,7 +35,6 @@
 
 
 
-# owncloud_app
 
 
 
