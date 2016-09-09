@@ -1,8 +1,8 @@
 #### Summary 
 
-  1. [What are Roles/Profiles](#what-are-rolesprofile)
-    - [Example node classification in site.pp](#section-id-9)
-    - [Example node classification with role/profile in site.pp](#section-id-37)
+  1. [What are Roles/Profiles](#what-are-rolesprofiles)
+    - [Example node classification in site.pp](#example-node-classification-in-sitepp)
+    - [Example node classification with role/profile in site.pp](#example-node-classification-with-roleprofile-in-sitepp)
     - [Example Role](#section-id-50)
     - [Example profile](#section-id-62)
   2. [What is Application Orchestration Layout](#section-id-90)
