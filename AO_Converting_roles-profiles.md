@@ -11,8 +11,8 @@
   3. [Things to note when converting Roles/Profile](#things-to-knote-when-converting-rolesprofile)
   4. [Application Orchestration classification](#application-orchestration-classification)
     - [Example AO site definition in site.pp](#example-ao-site-definition-in-sitepp)
-    - [Example puppet-app command](#example-puppetapp-command)
-    - [Example puppet-job command](#example-puppetjob-command)
+    - [Example puppet-app command](#example-puppet-app-command)
+    - [Example puppet-job command](#example-puppet-job-command)
   5. [Additional Info](#additional-info)
   
 
