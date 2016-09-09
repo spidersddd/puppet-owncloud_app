@@ -1,20 +1,19 @@
-#Summary 
+#### Summary 
 
-- [AO, Converting roles/profiles](#section-id-1)
-    - [What are Roles/Profiles](#section-id-5)
-      - [Example node classification in site.pp](#section-id-9)
-      - [Example node classification with role/profile in site.pp](#section-id-37)
-      - [Example Role](#section-id-50)
-      - [Example profile](#section-id-62)
-    - [What is Application Orchestration Layout](#section-id-90)
-      - [Example owncloud\_app::web_profile for AO](#section-id-152)
-      - [Example AO application](#section-id-167)
-    - [Things to note when converting Roles/Profile](#section-id-229)
-    - [Application Orchestration classification](#section-id-238)
-      - [Example AO site definition in site.pp](#section-id-242)
-        - [Example puppet-app command](#section-id-268)
-      - [Example puppet-job command](#section-id-287)
-    - [Additional Info](#section-id-343)
+  1. [What are Roles/Profiles](#what-are-rolesprofile)
+    - [Example node classification in site.pp](#section-id-9)
+    - [Example node classification with role/profile in site.pp](#section-id-37)
+    - [Example Role](#section-id-50)
+    - [Example profile](#section-id-62)
+  2. [What is Application Orchestration Layout](#section-id-90)
+    - [Example owncloud\_app::web_profile for AO](#section-id-152)
+    - [Example AO application](#section-id-167)
+  3. [Things to note when converting Roles/Profile](#section-id-229)
+  4. [Application Orchestration classification](#section-id-238)
+    - [Example AO site definition in site.pp](#section-id-242)
+      - [Example puppet-app command](#section-id-268)
+    - [Example puppet-job command](#section-id-287)
+  5. [Additional Info](#section-id-343)
   
 
 
