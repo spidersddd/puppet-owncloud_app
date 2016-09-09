@@ -42,7 +42,9 @@ owncloud\_app
 
 ## Description
 
-The Puppet owncloud_app is a module that demonstrates an example application model. The module contains application components you can use to set up a Owncloud database and a Owncloud application server. With these components, you can build an Owncloud application stack.
+The Puppet owncloud_app is a module that demonstrates an example application model. The module contains application components you can use to set up a Owncloud database, Owncloud application servers, and a HAproxy load-balancer frontend. With these components, you can build an Owncloud application stack.
+
+This module was modeled after the [puppetlabs-wordpress\_app](https://forge.puppet.com/puppetlabs/wordpress_app) module.  It uses much of the same code and functions.
 
 
 
@@ -112,7 +114,7 @@ configured or disabled if you run into database connection errors.
 
 It uses functions to dynamically discover what components have been declared, and then it validates and connects them. You should use this type of definition if you have a varying number of components, or if some components are optional. By discovering the component names dynamically, you don't have to worry about matching statically declared component names.
 
-In the following example, the `collect_component_titles` function searches through the application's nodes and finds all resources matching a certain component type and returns a list of their titles. The function verifies that there is one database, and it then declares that resource. Since the name of the exported database capability resource is set for internal consumption, you shouldn't have to track the name.
+In the following example, the `collect_component_titles` function (provided by [puppetlabs-app\_modeling](https://forge.puppet.com/puppetlabs/app_modeling) searches through the application's nodes and finds all resources matching a certain component type and returns a list of their titles. The function verifies that there is one database, and it then declares that resource. Since the name of the exported database capability resource is set for internal consumption, you shouldn't have to track the name.
 
 ```puppet
   $db_components = collect_component_titles($nodes, Owncloud_app::Database)
