@@ -17,20 +17,20 @@ owncloud\_app
             - [Components](#components)
             - [Parameters](#parameters)
     2. [Component Types](#component-types)
-        1. [owncloud\_app::database](#owncloud_app::database)
-            - [Components](#components)
-            - [Parameters](#parameters)
-        2. [owncloud\_app::web](#owncloud_app::web)
-            - [Components](#components)
-            - [Parameters](#parameters)
-        3. [owncloud\_app::lb](#owncloud_app::lb)
-            - [Components](#components)
-            - [Parameters](#parameters)
+        - [owncloud\_app::database](#owncloud_app::database)
+            - Components
+            - Parameters
+        - [owncloud\_app::web](#owncloud_app::web)
+            - Components
+            - Parameters
+        - [owncloud\_app::lb](#owncloud_app::lb)
+            - Components
+            - Parameters
     3. [Classes](#classes)
         1. [owncloud\_app::database\_profile](#owncloud_app::database_profile)
-            - [Parameters](#parameters)
+            - Parameters
         2. [owncloud\_app::web\_profile](#owncloud_app::web_profile)
-            - [Parameters](#parameters)
+            - Parameters
   
 
 
