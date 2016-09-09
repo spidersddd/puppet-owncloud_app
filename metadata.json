@@ -1,0 +1,33 @@
+{
+  "name": "spidersddd-owncloud_app",
+  "version": "0.1.0",
+  "author": "spidersddd",
+  "summary": "This is an example module based on pupppetlabs-wordpress_app for Puppet Application Orchistration of Owncloud (shoekstra-owncloud)",
+  "license": "Apache-2.0",
+  "source": "https://github.com/spidersddd/puppet-owncloud_app",
+  "project_page": "https://github.com/spidersddd/puppet-owncloud_app",
+  "issues_url": "https://github.com/spidersddd/puppet-owncloud_app",
+  "dependencies": [
+    {
+      "name": "puppet",
+      "version_requirement": ">=4.5.0 <5.0.0"
+    }
+  ],
+  "dependencies": [
+    {"name":"puppetlabs-app_modeling","version_requirement":">=0.1.0 <0.2.0"},
+    {"name":"puppetlabs-firewall","version_requirement":">=1.0.1 <2.0.0"},
+    {"name":"puppetlabs-mysql","version_requirement":">=3.0.0 <4.0.0"},
+    {"name":"puppetlabs-apache","version_requirement":">=1.0.0 <2.0.0"},
+    {"name":"shoekstra-owncloud","version_requirement":">=0.5.2"},
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ],
+}
