@@ -17,7 +17,7 @@ owncloud\_app
             - Components
             - Parameters
     - [Component Types](#component-types)
-        - [owncloud\_app::database](#owncloud_app::database)
+        - [owncloud\_app::database](#component-types#owncloud_app::database)
             - Components
             - Parameters
         - [owncloud\_app::web](#owncloud\_app::web)
